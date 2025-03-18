@@ -11,7 +11,16 @@ public class Calc {
         int sum = 0;
 
         for (String bit : bits) {
-            sum += Integer.parseInt(bit);
+            if (bit.contains("*")) {
+                String[] factors = bit.split(" \\* ");
+                int product = 1;
+                for (String factor : factors) {
+                    product *= Integer.parseInt(factor);
+                }
+                sum += product;
+            } else {
+                sum += Integer.parseInt(bit);
+            }
         }
 
         return sum;
