@@ -79,4 +79,39 @@ public class CalcTest {
     public void test13() {
         assertThat(Calc.run("((10 + 20))")).isEqualTo(30);
     }
+    @Test
+    @DisplayName("((20 + 20)) + 20 == 60")
+    public void test14() {
+        assertThat(Calc.run("((20 + 20)) + 20")).isEqualTo(60);
+    }
+
+    @Test
+    @DisplayName("(10 + 20) * 3 == 90")
+    public void test15() {
+        assertThat(Calc.run("(10 + 20) * 3")).isEqualTo(90);
+    }
+
+    @Test
+    @DisplayName("(20 + 20) * 20 == 800")
+    public void test16() {
+        assertThat(Calc.run("(20 + 20) * 20")).isEqualTo(800);
+    }
+
+    @Test
+    @DisplayName("(10 + 20) * 3 == 90")
+    public void test17() {
+        assertThat(Calc.run("(10 + 20) * 3")).isEqualTo(90);
+    }
+
+    @Test
+    @DisplayName("10 + (10 + 5) == 25")
+    public void test18() {
+        assertThat(Calc.run("10 + (10 + 5)")).isEqualTo(25);
+    }
+
+    @Test
+    @DisplayName("-(10 + 5) == -15")
+    public void test19() {
+        assertThat(Calc.run("-(10 + 5)")).isEqualTo(-15);
+    }
 }
