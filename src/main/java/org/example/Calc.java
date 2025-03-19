@@ -5,6 +5,7 @@ public class Calc {
     public static int run(String exp) {
 
         exp = exp.replace("- ", "+ -");
+        exp = exp.replace("(", "").replace(")", "");
 
         String[] bits = exp.split(" \\+ ");
 
