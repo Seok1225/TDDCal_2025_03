@@ -73,4 +73,10 @@ public class CalcTest {
     public void test12() {
         assertThat(Calc.run("(10 + 20)")).isEqualTo(30);
     }
+
+    @Test
+    @DisplayName("((10 + 20)) == 30")
+    public void test13() {
+        assertThat(Calc.run("((10 + 20))")).isEqualTo(30);
+    }
 }
