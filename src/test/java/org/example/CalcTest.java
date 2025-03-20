@@ -79,6 +79,7 @@ public class CalcTest {
     public void test13() {
         assertThat(Calc.run("((10 + 20))")).isEqualTo(30);
     }
+
     @Test
     @DisplayName("((20 + 20)) + 20 == 60")
     public void test14() {
@@ -113,5 +114,11 @@ public class CalcTest {
     @DisplayName("-(10 + 5) == -15")
     public void test19() {
         assertThat(Calc.run("-(10 + 5)")).isEqualTo(-15);
+    }
+
+    @Test
+    @DisplayName("-(8 + 2) * -(7 + 3) + 5 == 105")
+    public void test20() {
+        assertThat(Calc.run("-(8 + 2) * -(7 + 3) + 5")).isEqualTo(105);
     }
 }
